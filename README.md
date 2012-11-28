@@ -1,4 +1,4 @@
-snipmate-snippets.vim
-=====================
+Snippets for vim snipMate
+=========================
 
-My snippets for vim snipmate
+  * jasmine
