@@ -2,27 +2,34 @@
 # @see https://github.com/vim-scripts/Jasmine-snippets-for-snipMate
 #
 
+# Describe
+snippet des
+	describe('${1:description}', function () {
+
+		${2}
+
+	});
+# It
+snippet it
+	it('${1:description}', function () {
+		${2}
+	});
+	${3}
 # After Each
 snippet aft
-	afterEach(function() {
+	afterEach(function () {
 		${1}
-	}
+	});
+
+# Before Each
+snippet bef
+	beforeEach(function () {
+		${1}
+	});
 
 # Any
 snippet any
 	jasmine.any(${1})
-
-#	Before Each
-snippet bef
-	beforeEach(function() {
-		${1}
-	});
-
-# Describe
-snippet des
-	describe("${1:description}", function() {
-		${2}
-	});${3}
 
 # Expect not to be defined
 snippet notd
@@ -104,37 +111,31 @@ snippet notsc
 snippet ex
 	expect(${1:target});${2}
 
-# It
-snippet it
-	it("${1:description}", function() {
-		${2}
-	});${3}
-
 # Runs
 snippet ru
-	runs(function() {
+	runs(function () {
 		${1}
 	});${2}
 
 # Spy on and call fake
 snippet scf
-	spyOn(${1:object}, "${2:method}").andCallFake(${3:function});${4}
+	spyOn(${1:object}, '${2:method}').andCallFake(${3:function});${4}
 
 # Spy on and call through
 snippet sct
-	spyOn(${1:object}, "${2:method}").andCallThrough();${3}
+	spyOn(${1:object}, '${2:method}').andCallThrough();${3}
 
 # Spy on and return
 snippet sr
-	spyOn(${1:object}, "${2:method}").andReturn(${3:arguments});${4}
+	spyOn(${1:object}, '${2:method}').andReturn(${3:arguments});${4}
 
 # Spy on and throw
 snippet st
-	spyOn(${1:object}, "${2:method}").andThrow(${3:exception});${4}
+	spyOn(${1:object}, '${2:method}').andThrow(${3:exception});${4}
 
 # Spy on
 snippet s
-	spyOn(${1:object}, "${2:method}");${3}
+	spyOn(${1:object}, '${2:method}');${3}
 
 # Waits
 snippet wa
